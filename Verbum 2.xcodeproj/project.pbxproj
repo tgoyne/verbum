@@ -17,6 +17,7 @@
 		D024B2CC198298DF00D7F599 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024B2CA198298DF00D7F599 /* DrawerViewController.swift */; };
 		D024B2CD198298DF00D7F599 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */; };
 		D024B2CF1982990A00D7F599 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D024B2CE1982990A00D7F599 /* Images.xcassets */; };
+		D0A2CE8E1982AB4700767CC5 /* ManagerLanguagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,18 @@
 			remoteInfo = "Verbum 2";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D03109841982A54600FB9B4C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D024B296198297D200D7F599 /* Verbum 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Verbum 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +57,7 @@
 		D024B2CA198298DF00D7F599 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D024B2CE1982990A00D7F599 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLanguagesController.swift; sourceTree = "<group>"; };
 		D259AD36F09741F98A0B1A96 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E0D16EB566974CD7A11964B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +115,7 @@
 				D024B2CE1982990A00D7F599 /* Images.xcassets */,
 				D024B2CA198298DF00D7F599 /* DrawerViewController.swift */,
 				D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */,
+				D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */,
 				D024B2C8198298D400D7F599 /* Main.storyboard */,
 				D024B2C2198298CB00D7F599 /* DictionaryViewController.swift */,
 				D024B2C3198298CB00D7F599 /* CollectionsViewController.swift */,
@@ -149,6 +164,7 @@
 				D024B293198297D200D7F599 /* Frameworks */,
 				D024B294198297D200D7F599 /* Resources */,
 				8EFF3B8E84054B34A2C5EA14 /* Copy Pods Resources */,
+				D03109841982A54600FB9B4C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -271,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A2CE8E1982AB4700767CC5 /* ManagerLanguagesController.swift in Sources */,
 				D024B2C6198298CB00D7F599 /* CollectionsViewController.swift in Sources */,
 				D024B2C5198298CB00D7F599 /* DictionaryViewController.swift in Sources */,
 				D024B2CD198298DF00D7F599 /* SettingsTableViewController.swift in Sources */,
@@ -383,6 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Verbum 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,6 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Verbum 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

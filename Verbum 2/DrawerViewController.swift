@@ -12,7 +12,7 @@ class DrawerViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	
 	@IBOutlet weak var tableView: UITableView!
 	
-	var items:[String] = ["We", "Heart", "Swift"]
+	var items:[String] = ["Russian", "Spanish"]
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
