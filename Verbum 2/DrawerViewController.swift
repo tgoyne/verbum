@@ -38,7 +38,8 @@ class DrawerViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 		self.revealViewController().revealToggleAnimated(true)
-		println("You selected cell #\(indexPath.row)!")
+		let object = array[UInt(indexPath!.row)] as Language
+		println("You selected cell #\(object)!")
 	}
 	
 	func reloadData() {

@@ -9,8 +9,8 @@
 import UIKit
 
 class DictionaryViewController: UIViewController {
-	let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 	
+	let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 	@IBOutlet weak var revealButton: UIBarButtonItem!
 	
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ class DictionaryViewController: UIViewController {
 		
 		var rec:UIGestureRecognizer = revealViewController().panGestureRecognizer() as UIGestureRecognizer
 		self.navigationController.navigationBar.addGestureRecognizer(rec)
+		
     }
 
     override func didReceiveMemoryWarning() {

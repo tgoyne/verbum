@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	let navBarTint:Int = 0x108091
 	
 	func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//		DBManager().deleteRealmFile()
 		//window!.tintColor = UIColor.colorWithRGBHex(0xffffff, alpha: 1)
 		return true
 	}
@@ -50,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication!) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
 
 }
 
