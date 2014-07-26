@@ -39,11 +39,6 @@ class DrawerViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 		self.revealViewController().revealToggleAnimated(true)
 		println("You selected cell #\(indexPath.row)!")
-//		var alert = UIAlertView()
-//		alert.title =  "Message"
-//		alert.message = "This is to inform you that an action has been executed"
-//		alert.addButtonWithTitle("Alright")
-//		alert.show()
 	}
 	
 	func reloadData() {
