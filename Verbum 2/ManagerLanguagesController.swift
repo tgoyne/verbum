@@ -9,11 +9,6 @@
 import UIKit
 import Realm
 
-class Language: RLMObject {
-	var title = ""
-	var position:Int?
-}
-
 class Cell: UITableViewCell {
 	
 	init(style: UITableViewCellStyle, reuseIdentifier: String!) {
@@ -28,6 +23,7 @@ class ManagerLanguagesController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		//DBManager().deleteRealmFile()
 		setupUI()
 		notificationToken = RLMRealm.defaultRealm().addNotificationBlock { note, realm in
 			self.reloadData()
@@ -41,10 +37,9 @@ class ManagerLanguagesController: UITableViewController {
 	
 	func setupUI() {
 		tableView.registerClass(Cell.self, forCellReuseIdentifier: "cell")
-		
 		self.title = "Languages"
-		self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "BG Add", style: .Plain, target: self, action: "backgroundAdd")
-		self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "add")
+		//self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "BG Add", style: .Plain, target: self, action: "backgroundAdd")
+		//self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "add")
 	}
 	
 	override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
@@ -71,20 +66,20 @@ class ManagerLanguagesController: UITableViewController {
 		tableView.reloadData()
 	}
 	
-	func backgroundAdd() {
-		let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-		// Import many items in a background thread
-		dispatch_async(queue) {
-			// Get new realm and table since we are in a new thread
-			let realm = RLMRealm.defaultRealm()
-			realm.beginWriteTransaction()
-			for index in 0..<5 {
-				// Add row via dictionary. Order is ignored.
-				Language.createInRealm(realm, withObject: ["title": self.randomString(), "position": self.randomInt()])
-			}
-			realm.commitWriteTransaction()
-		}
-	}
+//	func backgroundAdd() {
+//		let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+//		// Import many items in a background thread
+//		dispatch_async(queue) {
+//			// Get new realm and table since we are in a new thread
+//			let realm = RLMRealm.defaultRealm()
+//			realm.beginWriteTransaction()
+//			for index in 0..<5 {
+//				// Add row via dictionary. Order is ignored.
+//				Language.createInRealm(realm, withObject: ["title": self.randomString(), "position": self.randomInt()])
+//			}
+//			realm.commitWriteTransaction()
+//		}
+//	}
 	
 	func add() {
 		let realm = RLMRealm.defaultRealm()

@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="-224" y="-776"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController storyboardIdentifier="TabGroup" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabGroup" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" customClass="TabBarViewController" customModule="Verbum_2" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -302,11 +302,79 @@
                             <outlet property="delegate" destination="Oea-Oj-XhN" id="66K-6s-LkR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JdA-N5-7eA"/>
+                    <navigationItem key="navigationItem" id="JdA-N5-7eA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vOD-O2-Y3l">
+                            <connections>
+                                <segue destination="uE6-XE-aey" kind="modal" id="hm0-fq-C0W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhv-dL-ZI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1248" y="1070"/>
+        </scene>
+        <!--New Language View Controller-->
+        <scene sceneID="Jmg-c0-Fcr">
+            <objects>
+                <viewController id="n6s-O6-zNj" customClass="NewLanguageViewController" customModule="Verbum_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oPq-b1-cDX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v5t-Mr-dsC">
+                                <rect key="frame" x="20" y="81" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="EPf-Ue-wGT">
+                                <rect key="frame" x="20" y="110" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DiA-dv-SzA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CWn-JP-3hO">
+                            <connections>
+                                <action selector="cancelSave:" destination="n6s-O6-zNj" id="flS-7x-oOG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dO9-cY-Qjv">
+                            <connections>
+                                <action selector="saveData:" destination="n6s-O6-zNj" id="JzT-fi-VjD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="languageTitle" destination="EPf-Ue-wGT" id="a7b-kp-ZLv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lhr-3s-tM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2141" y="1070"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ie2-Yc-0fd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uE6-XE-aey" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="56j-i6-nHg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n6s-O6-zNj" kind="relationship" relationship="rootViewController" id="rga-ev-nph"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ks-XO-itZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="1070"/>
         </scene>
     </scenes>
     <resources>

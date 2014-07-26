@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	let navBarTint:Int = 0x108091
 	
 	func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+		//window!.tintColor = UIColor.colorWithRGBHex(0xffffff, alpha: 1)
 		return true
 	}
 

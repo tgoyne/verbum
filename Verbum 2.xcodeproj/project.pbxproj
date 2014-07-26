@@ -17,7 +17,10 @@
 		D024B2CC198298DF00D7F599 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024B2CA198298DF00D7F599 /* DrawerViewController.swift */; };
 		D024B2CD198298DF00D7F599 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */; };
 		D024B2CF1982990A00D7F599 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D024B2CE1982990A00D7F599 /* Images.xcassets */; };
+		D0519611198380B200F801AC /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0519610198380B200F801AC /* DBManager.swift */; };
+		D051961319838D3400F801AC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D051961219838D3400F801AC /* TabBarViewController.swift */; };
 		D0A2CE8E1982AB4700767CC5 /* ManagerLanguagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */; };
+		D0E33F6E1982EFA10010CFEF /* NewLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E33F6D1982EFA10010CFEF /* NewLanguageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +60,10 @@
 		D024B2CA198298DF00D7F599 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D024B2CE1982990A00D7F599 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0519610198380B200F801AC /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		D051961219838D3400F801AC /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLanguagesController.swift; sourceTree = "<group>"; };
+		D0E33F6D1982EFA10010CFEF /* NewLanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLanguageViewController.swift; sourceTree = "<group>"; };
 		D259AD36F09741F98A0B1A96 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E0D16EB566974CD7A11964B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,15 +118,11 @@
 		D024B298198297D200D7F599 /* Verbum 2 */ = {
 			isa = PBXGroup;
 			children = (
-				D024B2CE1982990A00D7F599 /* Images.xcassets */,
-				D024B2CA198298DF00D7F599 /* DrawerViewController.swift */,
-				D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */,
-				D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */,
-				D024B2C8198298D400D7F599 /* Main.storyboard */,
-				D024B2C2198298CB00D7F599 /* DictionaryViewController.swift */,
-				D024B2C3198298CB00D7F599 /* CollectionsViewController.swift */,
-				D024B2C4198298CB00D7F599 /* FavoritesViewController.swift */,
+				D0E33F6C1982ED710010CFEF /* Controllers */,
 				D024B2BC1982987600D7F599 /* AppDelegate.swift */,
+				D0519610198380B200F801AC /* DBManager.swift */,
+				D024B2C8198298D400D7F599 /* Main.storyboard */,
+				D024B2CE1982990A00D7F599 /* Images.xcassets */,
 				D024B299198297D200D7F599 /* Supporting Files */,
 				D024B2BA198297FD00D7F599 /* Verbum 2-Bridging-Header.h */,
 			);
@@ -150,6 +152,53 @@
 				D024B2AF198297D200D7F599 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D051961419838EFC00F801AC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */,
+				D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */,
+				D0E33F6D1982EFA10010CFEF /* NewLanguageViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		D051961519838F1700F801AC /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				D024B2C2198298CB00D7F599 /* DictionaryViewController.swift */,
+			);
+			name = Dictionary;
+			sourceTree = "<group>";
+		};
+		D051961619838F2600F801AC /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				D024B2C3198298CB00D7F599 /* CollectionsViewController.swift */,
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
+		D051961719838F2F00F801AC /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				D024B2C4198298CB00D7F599 /* FavoritesViewController.swift */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		D0E33F6C1982ED710010CFEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D051961419838EFC00F801AC /* Settings */,
+				D051961519838F1700F801AC /* Dictionary */,
+				D051961619838F2600F801AC /* Collections */,
+				D051961719838F2F00F801AC /* Favorites */,
+				D024B2CA198298DF00D7F599 /* DrawerViewController.swift */,
+				D051961219838D3400F801AC /* TabBarViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,9 +340,12 @@
 				D024B2C6198298CB00D7F599 /* CollectionsViewController.swift in Sources */,
 				D024B2C5198298CB00D7F599 /* DictionaryViewController.swift in Sources */,
 				D024B2CD198298DF00D7F599 /* SettingsTableViewController.swift in Sources */,
+				D0519611198380B200F801AC /* DBManager.swift in Sources */,
 				D024B2CC198298DF00D7F599 /* DrawerViewController.swift in Sources */,
 				D024B2C7198298CB00D7F599 /* FavoritesViewController.swift in Sources */,
 				D024B2BD1982987600D7F599 /* AppDelegate.swift in Sources */,
+				D051961319838D3400F801AC /* TabBarViewController.swift in Sources */,
+				D0E33F6E1982EFA10010CFEF /* NewLanguageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
