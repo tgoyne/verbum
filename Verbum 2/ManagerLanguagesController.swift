@@ -17,7 +17,7 @@ class Cell: UITableViewCell {
 }
 
 class ManagerLanguagesController: UITableViewController {
-
+	
 	var array = RLMArray()
 	var notificationToken: RLMNotificationToken?
 	
