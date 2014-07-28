@@ -22,7 +22,7 @@ extension UIColor {
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
 	var window: UIWindow?
-	let navBarTint:Int = 0x108091
+	let navBarTint:Int = 0x3e3f44
 	
 	func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
 //		DBManager().deleteRealmFile()

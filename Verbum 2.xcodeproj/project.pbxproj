@@ -19,6 +19,7 @@
 		D024B2CF1982990A00D7F599 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D024B2CE1982990A00D7F599 /* Images.xcassets */; };
 		D0519611198380B200F801AC /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0519610198380B200F801AC /* DBManager.swift */; };
 		D051961319838D3400F801AC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D051961219838D3400F801AC /* TabBarViewController.swift */; };
+		D073D73B1986A72100A82B4A /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073D73A1986A72100A82B4A /* NavBarViewController.swift */; };
 		D0A2CE8E1982AB4700767CC5 /* ManagerLanguagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */; };
 		D0DBC70C1983D466002C5498 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBC6FF1983D43B002C5498 /* Realm.framework */; };
 		D0DBC70E1983D474002C5498 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0DBC7031983D43B002C5498 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -114,6 +115,7 @@
 		D024B2CE1982990A00D7F599 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0519610198380B200F801AC /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D051961219838D3400F801AC /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D073D73A1986A72100A82B4A /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
 		D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLanguagesController.swift; sourceTree = "<group>"; };
 		D0DBC6F51983D43A002C5498 /* Realm-Xcode6.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Realm-Xcode6.xcodeproj"; path = "../../../../Downloads/realm-cocoa-master 2/Realm-Xcode6.xcodeproj"; sourceTree = "<group>"; };
 		D0E33F6D1982EFA10010CFEF /* NewLanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLanguageViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				D051961719838F2F00F801AC /* Favorites */,
 				D024B2CA198298DF00D7F599 /* DrawerViewController.swift */,
 				D051961219838D3400F801AC /* TabBarViewController.swift */,
+				D073D73A1986A72100A82B4A /* NavBarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				D024B2BD1982987600D7F599 /* AppDelegate.swift in Sources */,
 				D051961319838D3400F801AC /* TabBarViewController.swift in Sources */,
 				D0E33F6E1982EFA10010CFEF /* NewLanguageViewController.swift in Sources */,
+				D073D73B1986A72100A82B4A /* NavBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

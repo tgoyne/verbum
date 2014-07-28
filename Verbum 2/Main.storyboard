@@ -162,7 +162,7 @@
         <!--Dictionary-->
         <scene sceneID="jdI-JV-7Ao">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e3G-ZJ-MAA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e3G-ZJ-MAA" customClass="NavBarViewController" customModule="Verbum_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dictionary" image="dictionary-icon" id="I7t-XZ-Uaj"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -182,7 +182,7 @@
         <!--Collections-->
         <scene sceneID="0lA-Fk-Brb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fit-26-hJN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fit-26-hJN" customClass="NavBarViewController" customModule="Verbum_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Collections" image="collection-icon" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -202,7 +202,7 @@
         <!--Favorites-->
         <scene sceneID="Kde-XC-hyz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N1R-kv-scC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N1R-kv-scC" customClass="NavBarViewController" customModule="Verbum_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="favorite-icon" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -222,7 +222,7 @@
         <!--Settings-->
         <scene sceneID="5Me-dI-BlS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rbj-0K-K3h" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rbj-0K-K3h" customClass="NavBarViewController" customModule="Verbum_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings-icon" id="eDX-c4-QX1"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -310,13 +310,7 @@
                             <outlet property="delegate" destination="Oea-Oj-XhN" id="66K-6s-LkR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JdA-N5-7eA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vOD-O2-Y3l">
-                            <connections>
-                                <segue destination="uE6-XE-aey" kind="modal" id="hm0-fq-C0W"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="JdA-N5-7eA"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hhv-dL-ZI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,10 +360,10 @@
             </objects>
             <point key="canvasLocation" x="2141" y="1070"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav Bar View Controller-->
         <scene sceneID="Ie2-Yc-0fd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uE6-XE-aey" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="newLanguage" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uE6-XE-aey" customClass="NavBarViewController" customModule="Verbum_2" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="56j-i6-nHg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

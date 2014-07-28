@@ -9,14 +9,9 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-
-	let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.navigationController.navigationBar.barTintColor = UIColor.colorWithRGBHex(appDelegate.navBarTint, alpha: 1)
-	
     }
 
     override func didReceiveMemoryWarning() {

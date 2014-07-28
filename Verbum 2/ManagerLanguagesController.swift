@@ -37,9 +37,24 @@ class ManagerLanguagesController: UITableViewController {
 	func setupUI() {
 		tableView.registerClass(Cell.self, forCellReuseIdentifier: "cell")
 		self.title = "Languages"
+		
+		var addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "add")
+		var editButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "edit")
+		var buttons = [addButton, editButton]
+		
+		self.navigationItem.rightBarButtonItems = buttons
 	}
 	
-	override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
+	func add() {
+		var addLanguageView:UIViewController = self.storyboard.instantiateViewControllerWithIdentifier("newLanguage") as UIViewController
+		self.navigationController.presentViewController(addLanguageView, animated: true, completion: nil)
+	}
+	
+	func edit() {
+	
+	}
+	
+ 	override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
 		let cell = tableView!.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as Cell
 		
 		let object = array[UInt(indexPath!.row)] as Language
