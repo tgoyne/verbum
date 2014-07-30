@@ -22,14 +22,8 @@ class NewLanguageViewController: UIViewController, UITextFieldDelegate {
 	
 	@IBAction func saveData(sender: AnyObject) {
 		realm.beginWriteTransaction()
-//		var allObjects = Language.allObjects()
-//		var newPosition:Int
-//		if allObjects.count > 0 {
-//			newPosition = allObjects.maxOfProperty("position") as Int
-//		} else {
-//			newPosition = 0
-//		}
-		Language.createInRealm(realm, withObject: [languageTitle.text])
+        let list = LanguageList.allObjects().firstObject() as LanguageList!
+		list.languages.addObject(Language.createInRealm(realm, withObject: [languageTitle.text]))
 		realm.commitWriteTransaction()
 		self.view.endEditing(true)
 		dismissViewControllerAnimated(true, completion: nil)

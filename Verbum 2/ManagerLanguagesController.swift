@@ -10,8 +10,6 @@ import UIKit
 import Realm
 
 class Cell: UITableViewCell {
-	
-//	var position: Int!
 	///override var description: String { return "Cell with position \(position)" }
 	init(style: UITableViewCellStyle, reuseIdentifier: String!) {
 		super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
@@ -20,19 +18,25 @@ class Cell: UITableViewCell {
 }
 
 class ManagerLanguagesController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
-	
 	var array = RLMArray()
 	var notificationToken: RLMNotificationToken?
 	var editButton = UIBarButtonItem()
+    var languageList : LanguageList?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		var realm = RLMRealm.defaultRealm()
-		realm.beginWriteTransaction()
-		realm.addObject(LanguageList())
-		realm.commitWriteTransaction()
-		
+		let realm = RLMRealm.defaultRealm()
+
+        // Create the list of languages if it does not exist yet
+        self.languageList = LanguageList.allObjectsInRealm(realm).firstObject() as LanguageList!
+        if !self.languageList {
+            self.languageList = LanguageList()
+            realm.beginWriteTransaction()
+            realm.addObject(self.languageList)
+            realm.commitWriteTransaction()
+        }
+
 		setupUI()
 		notificationToken = RLMRealm.defaultRealm().addNotificationBlock { note, realm in
 			self.reloadData()
@@ -105,7 +109,6 @@ class ManagerLanguagesController: UITableViewController, UITableViewDelegate, UI
 		
 		let object = array[UInt(indexPath!.row)] as Language
 		cell.textLabel.text = object.title
-//		cell.position = object.position
 		return cell
 	}
 	
@@ -122,27 +125,19 @@ class ManagerLanguagesController: UITableViewController, UITableViewDelegate, UI
 		return true
 	}
 	
-	func toArray() -> RLMArray {
-		return (LanguageList.allObjects().firstObject() as LanguageList).languages
-	}
-	
 	override func tableView(tableView: UITableView!, moveRowAtIndexPath sourceIndexPath: NSIndexPath!, toIndexPath destinationIndexPath: NSIndexPath!) {
 		//	println("Old index: \(sourceIndexPath.indexAtPosition(sourceIndexPath.length - 1)+1)")
 		//	println("New index: \(destinationIndexPath.indexAtPosition(sourceIndexPath.length - 1)+1)")
-		var languages = toArray()
-		var object = languages.objectAtIndex(UInt(sourceIndexPath.row)) as Language
-		var realm = RLMRealm.defaultRealm()
+		let object = array.objectAtIndex(UInt(sourceIndexPath.row)) as Language
+		let realm = RLMRealm.defaultRealm()
 		realm.beginWriteTransaction()
-		languages.removeObjectAtIndex(UInt(sourceIndexPath.row))
-		languages.insertObject(object, atIndex: UInt(destinationIndexPath.row))
+		array.removeObjectAtIndex(UInt(sourceIndexPath.row))
+		array.insertObject(object, atIndex: UInt(destinationIndexPath.row))
 		realm.commitWriteTransaction()
-		
 	}
-	
-	
+
 	func reloadData() {
-//		array = Language.allObjects().arraySortedByProperty("position", ascending: true)
-		array = Language.allObjects()
+		array = self.languageList!.languages
 		tableView.reloadData()
 	}
 
