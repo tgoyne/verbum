@@ -43,7 +43,7 @@ class DrawerViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	}
 	
 	func reloadData() {
-		array = Language.allObjects().arraySortedByProperty("position", ascending: true)
+		array = Language.allObjects()
 		tableView.reloadData()
 	}
 }

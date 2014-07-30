@@ -21,6 +21,8 @@
 		D051961319838D3400F801AC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D051961219838D3400F801AC /* TabBarViewController.swift */; };
 		D073D73B1986A72100A82B4A /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073D73A1986A72100A82B4A /* NavBarViewController.swift */; };
 		D0A2CE8E1982AB4700767CC5 /* ManagerLanguagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */; };
+		D0A68FEF19883CB300C867E6 /* NativeLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A68FEE19883CB300C867E6 /* NativeLanguageController.swift */; };
+		D0BCDEBA1988FE2100A32576 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BCDEB91988FE2100A32576 /* HamburgerButton.swift */; };
 		D0DBC70C1983D466002C5498 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBC6FF1983D43B002C5498 /* Realm.framework */; };
 		D0DBC70E1983D474002C5498 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0DBC7031983D43B002C5498 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D0E33F6E1982EFA10010CFEF /* NewLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E33F6D1982EFA10010CFEF /* NewLanguageViewController.swift */; };
@@ -117,6 +119,8 @@
 		D051961219838D3400F801AC /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D073D73A1986A72100A82B4A /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
 		D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLanguagesController.swift; sourceTree = "<group>"; };
+		D0A68FEE19883CB300C867E6 /* NativeLanguageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeLanguageController.swift; sourceTree = "<group>"; };
+		D0BCDEB91988FE2100A32576 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		D0DBC6F51983D43A002C5498 /* Realm-Xcode6.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Realm-Xcode6.xcodeproj"; path = "../../../../Downloads/realm-cocoa-master 2/Realm-Xcode6.xcodeproj"; sourceTree = "<group>"; };
 		D0E33F6D1982EFA10010CFEF /* NewLanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLanguageViewController.swift; sourceTree = "<group>"; };
 		D259AD36F09741F98A0B1A96 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -174,7 +178,7 @@
 		D024B298198297D200D7F599 /* Verbum 2 */ = {
 			isa = PBXGroup;
 			children = (
-				D0DBC6F51983D43A002C5498 /* Realm-Xcode6.xcodeproj */,
+				D0BCDEC11988FE4A00A32576 /* Classes */,
 				D0E33F6C1982ED710010CFEF /* Controllers */,
 				D024B2BC1982987600D7F599 /* AppDelegate.swift */,
 				D0519610198380B200F801AC /* DBManager.swift */,
@@ -189,6 +193,7 @@
 		D024B299198297D200D7F599 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0DBC6F51983D43A002C5498 /* Realm-Xcode6.xcodeproj */,
 				D024B29A198297D200D7F599 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -217,6 +222,7 @@
 				D024B2CB198298DF00D7F599 /* SettingsTableViewController.swift */,
 				D0A2CE8D1982AB4700767CC5 /* ManagerLanguagesController.swift */,
 				D0E33F6D1982EFA10010CFEF /* NewLanguageViewController.swift */,
+				D0A68FEE19883CB300C867E6 /* NativeLanguageController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -243,6 +249,14 @@
 				D024B2C4198298CB00D7F599 /* FavoritesViewController.swift */,
 			);
 			name = Favorites;
+			sourceTree = "<group>";
+		};
+		D0BCDEC11988FE4A00A32576 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D0BCDEB91988FE2100A32576 /* HamburgerButton.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		D0DBC6F61983D43A002C5498 /* Products */ = {
@@ -467,10 +481,12 @@
 				D0519611198380B200F801AC /* DBManager.swift in Sources */,
 				D024B2CC198298DF00D7F599 /* DrawerViewController.swift in Sources */,
 				D024B2C7198298CB00D7F599 /* FavoritesViewController.swift in Sources */,
+				D0A68FEF19883CB300C867E6 /* NativeLanguageController.swift in Sources */,
 				D024B2BD1982987600D7F599 /* AppDelegate.swift in Sources */,
 				D051961319838D3400F801AC /* TabBarViewController.swift in Sources */,
 				D0E33F6E1982EFA10010CFEF /* NewLanguageViewController.swift in Sources */,
 				D073D73B1986A72100A82B4A /* NavBarViewController.swift in Sources */,
+				D0BCDEBA1988FE2100A32576 /* HamburgerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

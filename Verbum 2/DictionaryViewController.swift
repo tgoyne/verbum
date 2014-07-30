@@ -8,24 +8,30 @@
 
 import UIKit
 
-class DictionaryViewController: UIViewController {
-	
-	
-	@IBOutlet weak var revealButton: UIBarButtonItem!
+class DictionaryViewController: UIViewController, SWRevealViewControllerDelegate {
+
+	//@IBOutlet weak var revealButton: UIBarButtonItem!
+	var revealButton = UIBarButtonItem()
 	
     override func viewDidLoad() {
-		
         super.viewDidLoad()
-		
 		revealViewController().rearViewRevealWidth = 150 // Width of Drawer
 		revealViewController().frontViewShadowOpacity = 0.5
-		revealButton.target = revealViewController()
-		revealButton.action = Selector("revealToggle:")
 		
+		revealButton = UIBarButtonItem(barButtonSystemItem: .Done, target: revealViewController(), action: Selector("revealToggle:"))
+		
+		self.navigationItem.leftBarButtonItem = revealButton
 		var rec:UIGestureRecognizer = revealViewController().panGestureRecognizer() as UIGestureRecognizer
 		self.navigationController.navigationBar.addGestureRecognizer(rec)
-		
     }
+	
+	func revealViewController(revealController: SWRevealViewController!, didMoveToPosition position: FrontViewPosition) {
+		println("Menu moved!")
+	}
+	
+	func revealViewController(revealController: SWRevealViewController!, willMoveToPosition position: FrontViewPosition) {
+		println("Menu will be moved!")
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
